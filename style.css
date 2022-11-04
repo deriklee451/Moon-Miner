@@ -1,0 +1,37 @@
+/* NOTE Font */
+
+.vgfont {
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+/* NOTE Images */
+.bg-space {
+    background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1700&q=80');
+    background-position: cover;
+}
+
+.special {
+    height: 100px;
+}
+
+.notSpecial {
+    height: 50px;
+}
+
+.move-up {
+    transform: translateY(-8vh);
+}
+
+
+.moonman:hover {
+    /* transform: scale(1.05); */
+    cursor: pointer;
+
+
+}
+
+.moonman:active {
+    transform: scale(1.05);
+}
