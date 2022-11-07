@@ -43,28 +43,50 @@
 
         <!-- NOTE Scoreboard -->
         <section class="row p-5 vgfont justify-content-center align-items-end">
-            <div class="col-3 card notSpecial bg-warning">Test</div>
+            <div class="col-3 card notSpecial bg-warning">Per Click <span id="click-total"></span></div>
             <div class="col-4 card special bg-warning">
                 <p>Score</p>
                 <p id="score">0</p>
             </div>
-            <div class="col-3 card notSpecial bg-warning">test</div>
+            <div class="col-3 card notSpecial bg-warning">Auto Mine 3s<span id="auto-quan">0</span></div>
         </section>
 
-
+        <!-- NOTE under scoreboard -->
         <section class="row m-2 move-up">
-            <div class="col-12 p-5 card bg-warning">
+            <div class="col-12 card bg-warning">
                 <div class="row justify-content-evenly">
-                    <div class="col-4 card">
-                        <div class="col-4 btn btn-primary btn-sm" onclick="buyPickaxe()">Pickaxe + <span
-                                id="pick-cost">1</span> </div>
-                        <p>test</p>
-                        <div class="col-4 btn btn-primary btn-sm" onclick="buyShovel()">Shovel +3</div>
+                    <div class="col-6 justify-content-evenly">
+                        <h4 class="vgfont d-flex p-2 justify-content-center">Click Upgrades</h4>
                     </div>
-                    <div class="col-4 card">
-                        <div class="col-4 btn btn-primary" onclick="buyRover()">Rover +1</div>
-                        <div class="col-4 btn btn-primary" onclick="buyRig()">Drill Rig
+
+                    <div class="col-6">
+                        <h4 class="vgfont d-flex justify-content-center">Auto Upgrades (3 seconds)</h4>
+                    </div>
+
+                    <div class="row"></div>
+                    <div class="col-4 card bg-warning text-dark">
+
+                        <div class="col-4 btn btn-primary btn-sm" onclick="buyPickaxe()">Pickaxe +1 <span
+                                id="pick-cost"></span>
+                            100</span> </div>
+                        <h4 class="vgfont">Picks # <span id="pick-quan">1</span></h4>
+
+                        <div class="col-4 btn btn-primary btn-sm" onclick="buyShovel()">Shovel +3 <span id="shov-cost">
+                                200</span></div>
+
+                        <h4 class="vgfont">Shovels #<span id="shov-quan">0</span></h4>
+                    </div>
+
+
+                    <div class="col-4 card bg-warning">
+                        <div class="col-4 btn btn-primary" onclick="buyRover()">Rover +20 <span
+                                id="rove-price">600</span>
                         </div>
+                        <h4 class="vgfont">Rovers #<span id="rove-quan">0</span></h4>
+                        <div class="col-4 btn btn-primary" onclick="buyRig()">Drill Rig +1000 <span
+                                id="rig-cost">1000</span>
+                        </div>
+                        <h4 class="vgfont">Rigs #<span id="rig-quan">0</span></h4>
                     </div>
                 </div>
 

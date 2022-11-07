@@ -33,7 +33,8 @@ let automaticUpgrades = [
     }
 ]
 
-
+automaticUpgrades.multiplier++
+console.log(automaticUpgrades.multiplier)
 
 // NOTE Functions
 function mine() {
@@ -58,7 +59,7 @@ function buyPickaxe() {
         pickaxe.quantity++
         pickaxe.price = pickaxe.price * 2
         document.getElementById('pick-cost').innerHTML = pickaxe.price
-        console.log(pickaxe);
+        document.getElementById('pick-quan').innerText = (pickaxe.quantity + 1)
         update()
     }
 
@@ -72,6 +73,8 @@ function buyShovel() {
         cheese -= shovel.price
         shovel.quantity++
         shovel.price = shovel.price * 2
+        document.getElementById('shov-cost').innerText = shovel.price
+        document.getElementById('shov-quan').innerText = (shovel.quantity * 3)
         update()
     }
 
@@ -83,6 +86,9 @@ function buyShovel() {
 // NOTE UPDATE
 function update() {
     document.getElementById('score').innerText = cheese
+
+    autoQuantity()
+    clickTotal()
 }
 
 
@@ -93,6 +99,8 @@ function buyRover() {
         cheese -= rover.price
         rover.quantity++
         rover.price = rover.price * 2
+        document.getElementById('rove-price').innerText = rover.price
+        document.getElementById('rove-quan').innerText = rover.quantity
         update()
     }
     else alert('You need more cheese')
@@ -105,6 +113,8 @@ function buyRig() {
         cheese -= rig.price
         rig.quantity++
         rig.price = rig.price * 2
+        document.getElementById('rig-cost').innerText = rig.price
+        document.getElementById('rig-quan').innerText = rig.quantity
         update()
     }
     else alert('You need more cheese')
@@ -118,6 +128,27 @@ function collectAutoUpgrades() {
         }
     })
     update()
+}
+
+
+function autoQuantity() {
+
+    let total = 0
+    automaticUpgrades.forEach(
+        a => {
+            total += a.quantity * a.multiplier
+        })
+
+    document.getElementById('auto-quan').innerText = total
+}
+
+function clickTotal() {
+
+    let total = 1
+    clickUpgrades.forEach(c => {
+        total += c.quantity * c.multiplier
+    })
+    document.getElementById('click-total').innerText = total
 }
 
 
